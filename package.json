@@ -11,5 +11,8 @@
     "url": "git@github-personal.com:faisakhtar/training-node-lambda-deploy.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1223.0"
+  }
 }
