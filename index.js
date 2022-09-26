@@ -6,7 +6,7 @@ function params (queryId)
     return {
       TableName : 'animals',
       Key: {
-        id: queryId
+        id: "1"
       }
     }
 
