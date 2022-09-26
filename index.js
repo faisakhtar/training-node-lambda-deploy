@@ -6,7 +6,7 @@ function params (queryId)
     return {
       TableName : 'animals',
       Key: {
-        id: "1"
+        id: queryId
       }
     }
 
@@ -22,11 +22,7 @@ async function getItem(queryId){
 }
 
 exports.handler = async (event, context) => {
-  var queryId = 0;
-  if(event && event.query && event.query.id)
-  {
-    queryId = event.query.id;
-  } 
+  var queryId = event.pathParameters.id;
   try {
     const data = await getItem(queryId)
     return { body: JSON.stringify(data) }
